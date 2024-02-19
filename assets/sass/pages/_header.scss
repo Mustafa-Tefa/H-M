@@ -1,0 +1,747 @@
+
+// START STYLE PRELOAD..........................
+
+.preload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/assets/imges/header/man-1253004_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 5500;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    transition-duration: 5s;
+
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 3px solid $white;
+        border-block-start-color: rgb(18, 17, 17);
+        margin-block-end: 45px;
+        animation: rotate360 1s linear infinite;
+
+        @keyframes rotate360 {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        border-radius: 80px;
+        padding: 12px 5px;
+        top: 290px;
+        animation: imgscale 3s infinite;
+
+        @keyframes imgscale {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.preload>* {
+    transition: 250ms ease;
+}
+
+.nav-opacity>* {
+    transition: 0.5s ease;
+}
+
+
+
+// END STYLE PRELOAD..........................
+
+
+// START STYLE TOPBBAR..........................
+
+.topbar {
+
+    @include flex-between;
+    // background-color: rgb(0, 0, 0);
+    color: $white;
+    height: 50px;
+    padding: 10px 15px;
+    width: 100%;
+    border-bottom: solid 1px $white;
+
+    .location-h_m {
+        width: 650px;
+        @include flex-between;
+        gap: 20px;
+    }
+
+    .location-h_m .adress {
+        @include flex-center;
+        gap: 5px;
+    }
+
+    .location-h_m .time {
+        @include flex-center;
+        gap: 5px;
+    }
+
+    i {
+        margin-top: 1px;
+    }
+
+    span {
+        color: $red;
+    }
+
+    .call {
+        @include flex-between;
+        width: 400px;
+        gap: 20px;
+
+        a {
+            display: flex;
+            gap: 5px;
+            color: $white;
+            text-decoration: none;
+            transition: 0.5s;
+
+            i {
+                transition: 0.5s;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+
+        }
+
+        a:hover {
+            color: $red;
+        }
+    }
+
+    position: absolute;
+    top: 0px ;
+    left: 0;
+    z-index: 20;
+
+}
+
+// END STYLE TOPBBAR..........................
+
+// START STYLE NAVBAR..........................
+main {
+    header {
+        #nav-bar {
+            position: absolute;
+            width: 100%;
+            top: 50px ;
+            left: 0;
+            z-index: 20;
+            @include flex-between;
+            // background-color: $black;
+            padding: 10px 20px;
+
+
+            .menu {
+
+                ul {
+
+                    a {
+                        margin: 20px;
+                        position: relative;
+                        padding: 10px 0;
+                        transition: 0.5s;
+                        font-size: 20px;
+
+                        &:hover {
+                            color: $red;
+                            border-bottom: solid 1px $red;
+                        }
+
+                        &.active {
+                            color: $red;
+                            transition: 0.5s;
+                            border-bottom: solid 1px $red ;
+                        }
+
+                        &:hover::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            bottom: 5px;
+                            left: 0;
+                            background-color: $red;
+                        }
+
+                        &.active::after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            bottom: 5px;
+                            left: 0;
+                            background-color: $red;
+                        }
+
+                    }
+                }
+            }
+
+            .icon-nav {
+
+                margin-right: 10px;
+
+                a {
+                    // background-color: black;
+                    margin-left: 20px;
+                    cursor: pointer;
+                    border: none;
+                    // overflow: hidden;
+                    font-size: 18px;
+
+
+                    &:nth-child(1) {
+                        position: relative;
+                    }
+
+                    i {
+                        transition: 0.5s;
+                    }
+
+                    i:hover {
+                        color: $red;
+                    }
+
+                    .sp-cart {
+                        position: absolute;
+                        color: $red;
+                        bottom: 20px;
+                        left: -10px;
+                    }
+
+                    &:nth-child(2) {
+                        position: relative;
+                    }
+
+                    .sp-list {
+                        position: absolute;
+                        color: $red;
+                        bottom: 20px;
+                        left: -10px;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+}
+
+// ........NAV-BAR-MOBILE...................
+
+
+main {
+    header {
+        #nav-bar-mobile {
+            position: absolute;
+            width: 100%;
+            top: 0px ;
+            left: 0;
+            z-index: 20;
+            @include flex-between;
+            // background-color: $black;
+            padding: 10px 40px;
+
+            i {
+                font-size: 30px;
+                cursor: pointer;
+            }
+            display: none;
+            
+#nav-opacity {
+    text-align: center;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    background-color: $black-alpha-80;
+    z-index: 1;
+    width: 100%;
+    height: 105vh;
+    color: $white;
+    // overflow: hidden;
+    @include flex-center;
+    flex-direction: column;
+    transition: 2s;
+    z-index: 500000;
+   
+
+    a {
+        // margin: 20px;
+        position: relative;
+        padding: 10px 0;
+        transition: 0.5s;
+        font-size: 30px;
+        letter-spacing: 10px;
+
+        &:hover {
+            color: $red;
+            border-bottom: solid 1px $red;
+        }
+
+        &.active {
+            color: $red;
+            transition: 0.5s;
+            border-bottom: solid 1px $gold-crayola ;
+        }
+
+        &:hover::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 5px;
+            left: 0;
+            background-color: $red;
+        }
+
+        &.active::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 5px;
+            left: 0;
+            background-color: $red;
+        }
+
+        i {
+            transition: 0.5s;
+        }
+
+        i:hover {
+            color: $red;
+        }
+
+
+
+        &:nth-child(6) {
+            position: relative;
+        }
+
+        #total-cart {
+            position: absolute;
+            color: $red;
+            bottom: 45px;
+            left: -20px;
+        }
+
+    }
+
+    span {
+        transition: 0.5s;
+    }
+
+
+    li {
+        @include flex-evenly;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    #close-nav {
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        font-size: 30px
+    }
+}
+
+        }
+    }
+}
+
+// ......SECTION HOME.............
+
+main {
+    header {
+        .home {
+            width: 100%;
+            height: 100%;
+            height: 100vh;
+            position: relative;
+            transition: 0.5s ease;
+            .container-img1 {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                transition: 0.5s ease;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    z-index: -2;
+                }
+                .black-opacity {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(21, 20, 20, 0.627);
+                    z-index:10;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .title-home {
+                        
+                        h1 {
+                            font-size: 80px;
+                            
+                            span {
+                                color: red;
+                            }
+                        }
+                    }
+                    .thanks {
+                        h3{
+                            font-size: 30px;
+                        }
+                    }
+                    
+                    .links-hm {
+                        @include flex-around ; 
+                        width: 400px;
+                        height: 50px;
+                        // background-color: rgb(79, 81, 81);
+
+                        .face-insta {
+                            a {
+                                margin-left: 5px;
+                                font-size: 20px;
+                                transition: 1s ease;
+                                
+                                i {
+                                    transition: 1s ease;
+                                    &:nth-child(1):hover {
+                                        color: rgb(172, 25, 25);
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    i:hover {
+                                        color: rgb(172, 25, 25);
+                                    }
+                                }
+                            }
+                        }
+
+                        .shop-link {
+                            transition: 0.5 ease; ;
+
+                            &:hover i {
+                                color: $white;
+                            }
+                            a {
+                                font-size: 20px;
+                                color: $red;
+                                padding: 10px 15px;
+                                background-color: $black;
+                                border: none;
+                                outline: none;
+                                border-radius: 15px;
+                                transition: 0.5 ease;
+                                font-weight: 900;
+
+                                &:hover {
+                                    background-color: $black-alpha-15;
+                                    color: $white;
+                                }
+
+                                i{
+                                    transition: 0.5 ease;
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+           
+            .container-img2 {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index:1 ;
+                transition: 0.5s ease;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    z-index: -2;
+                }
+                .black-opacity {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(21, 20, 20, 0.627);
+                    z-index:10;
+                    color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .title-home {
+                        
+                        h1 {
+                            font-size: 80px;
+                            
+                            span {
+                                color: red;
+                            }
+                        }
+                    }
+                    .thanks {
+                        h3{
+                            font-size: 30px;
+                        }
+                    }
+                    
+                    .links-hm {
+                        @include flex-around ;
+                        flex-wrap: wrap; 
+                        width: 400px;
+                        height: 50px;
+                        // background-color: rgb(79, 81, 81);
+
+                        .face-insta {
+                            a {
+                                margin-left: 5px;
+                                font-size: 20px;
+                                transition: 1s ease;
+                                
+                                i {
+                                    transition: 1s ease;
+                                    &:nth-child(1):hover {
+                                        color:  rgb(172, 25, 25);
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    i:hover {
+                                        color:  rgb(172, 25, 25);
+                                    }
+                                }
+                            }
+                        }
+
+                        .shop-link {
+                            transition: 0.5 ease; 
+                            &:hover i {
+                                color: $white;
+                            }
+                            a {
+                                font-size: 20px;
+                                color: $red;
+                                padding: 10px 15px;
+                                background-color: $black;
+                                border: none;
+                                outline: none;
+                                border-radius: 15px;
+                                transition: 0.5 ease;
+                                font-weight: 900;
+
+                                &:hover {
+                                    background-color: $black-alpha-15;
+                                    color: $white;
+                                }
+
+                                i{
+                                    transition: 0.5 ease;
+                                    color: $red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}
+
+// ......SECTION fEATURES.............
+
+main {
+    .features {
+        .container-features {
+            padding-top: 20px;
+            background-color: $background;
+            min-height: 50vh;
+            @include flex-evenly ; 
+            gap: 10px;
+            flex-direction: row;
+            .card-features {
+                background-color: $background-card;
+                width: 180px;
+                border: 1px solid rgb(79, 79, 79);
+                border-radius: 10px;
+                text-align: center;
+                padding: 10px 0;
+                box-shadow: 0 0 5px white;
+                transition: 0.5s ease;
+                &:hover {
+                    box-shadow: 0 0 20px white;
+                }
+                img {
+                    width: 100%;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// ......SECTION FEATURES PRODUCTS.............
+
+main {
+    .feature-products {
+        padding-top: 40px;
+        background-color: #212020;
+        min-height: 100vh;
+        .title-products {
+            text-align: center;
+
+            h2 {
+                font-size: 60px;
+                color: $white;
+            }
+
+            p {
+                color: $white;
+                margin: 20px 0;
+            }
+        }
+
+        .container-proudcts{
+            @include flex-evenly ; 
+            min-height: 80vh;
+            align-items: center;
+            gap: 10px;
+            flex-direction: row;
+
+            .card-products {
+                min-width: 250px;
+                background-color: $background-card;
+                border-radius: 20px;
+                padding: 0px 0 15px 0;
+                box-shadow: 0 0 5px white;
+                transition: 0.2s ease;
+
+                &:hover {
+                    box-shadow: 0 0 10px white;
+                }
+                img {
+                    width: 250px;
+                    height: 250px;
+                    object-position: center;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+
+                .title-cards {
+                    margin-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    p {
+                        margin-top: 10px;
+                        color: $red;
+                    }
+
+                    h3 {
+                        color: $white;
+                        font-size: 15px;
+                    }
+
+                    .stars {
+                        
+                        i {
+                            color: $red;
+                        }
+                    }
+
+                    .price-card {
+                        display: flex;
+                        margin: 0 10px;
+                        justify-content: space-between;
+                        align-items: center;
+                   
+                            i {
+                                cursor: pointer;
+                            }
+                        
+                        h4 {
+                            color: $white;
+                        }
+                    }
+
+                    h4 {
+                        color: $white;
+                    }
+
+                    a {
+                        color: $red;
+                        // background-color: $white;
+                        width: 135px;
+                        // padding: 5px;
+                        // border-radius: 10px;
+
+                        i {
+                            font-size: 10px;
+                            color: $red;
+                            transition: 0.5s ease;
+                        }
+
+                        &:hover i {
+                            margin-left: 10px;
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}

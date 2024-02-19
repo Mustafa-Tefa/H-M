@@ -1,0 +1,145 @@
+{
+    "featur_products" : [
+        
+        {
+            "id" : 1 ,
+
+            "product_name" : "LINEN BLEND BELTED BLAZER" ,
+
+            "price" : "300$" , 
+
+            "onSale" : true , 
+
+            "count" : 8 , 
+
+            "product_url" : "assets/imges/feature-products/1.jpg"
+        }
+        ,
+        {
+            "id" : 2 ,
+
+            "product_name" : "TEXTURED SWEATER" ,
+
+            "price" : "300$" , 
+
+            "onSale" : false , 
+
+            "count" : 10 , 
+
+            "product_url" : "assets/imges/feature-products/2.jpg"
+        }
+        ,
+        {
+            "id" : 3 ,
+
+            "product_name" : "SHORT POCKET COAT" ,
+
+            "price" : "3000" , 
+
+            "onSale" : true , 
+
+            "count" : 22 , 
+
+            "product_url" : "assets/imges/feature-products/5.jpg"
+        }
+        ,
+        {
+            "id" : 4 ,
+
+            "product_name" : "BUTTONED COTTON BLAZER" ,
+
+            "price" : "300$" , 
+
+            "onSale" : true , 
+
+            "count" : 40 , 
+
+            "product_url" : "assets/imges/feature-products/8.jpg"
+        }
+        ,
+        {
+            "id" : 5 ,
+
+            "product_name" : "SHORT DARK" ,
+
+            "price" : "300$" , 
+
+            "onSale" : false , 
+
+            "count" : 50 , 
+
+            "product_url" : "assets/imges/feature-products/3.jpg"
+        }
+        ,
+        {
+            "id" : 6 ,
+
+            "product_name" : "SHORT WHITE" ,
+
+            "price" : "300$" , 
+
+            "onSale" : true , 
+
+            "count" : 18 , 
+
+            "product_url" : "assets/imges/feature-products/7.jpg"
+        }
+        ,
+        {
+            "id" : 7 ,
+
+            "product_name" : "CHAIN PRINT SHIRT" ,
+
+            "price" : "300$" , 
+
+            "onSale" : false , 
+
+            "count" : 12 , 
+
+            "product_url" : "assets/imges/feature-products/4.jpg"
+        }
+        ,
+        {
+            "id" : 8 ,
+
+            "product_name" : "Cartoon Astronaut T-shirt" ,
+
+            "price" : "300$" , 
+
+            "onSale" : true , 
+
+            "count" : 35 , 
+
+            "product_url" : "assets/imges/feature-products/6.jpeg"
+        }
+        ,
+        {
+            "id" : 9 ,
+
+            "product_name" : "Bermuda Trousers" ,
+
+            "price" : "300$" , 
+
+            "onSale" : false , 
+
+            "count" : 45 , 
+
+            "product_url" :"assets/imges/feature-products/15.jpeg"
+        }
+        ,
+        {
+            "id" : 10 ,
+
+            "product_name" : "Bermuda Trousers" ,
+
+            "price" : "300$" , 
+
+            "onSale" : true , 
+
+            "count" : 9 , 
+
+            "product_url" :"assets/imges/feature-products/11.jpg"
+        }
+        
+    ]
+}

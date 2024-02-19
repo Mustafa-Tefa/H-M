@@ -1,0 +1,36 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row ;
+    flex-wrap: wrap;
+}
+
+@mixin flex-between  {
+    display: flex;
+    justify-content:  space-between;
+    align-items:center;
+    flex-direction: row ;
+    flex-wrap: wrap;
+}
+
+@mixin flex-evenly  {
+    display: flex;
+    justify-content:  space-evenly;
+    align-items:center;
+    flex-direction: column ;
+    flex-wrap: wrap;
+}
+
+@mixin flex-around  {
+    display: flex;
+    justify-content:  space-around;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+@mixin banneer ($url,$height){
+    background: $url;
+    background-size: cover;
+    height: $height;
+}
